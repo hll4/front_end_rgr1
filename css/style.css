@@ -1,0 +1,168 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: black;
+}
+
+/* Базовые стили */
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+    background-color: white; /* Фон body — белый */
+}
+
+/* Убедимся, что содержимое body остается на переднем плане */
+body * {
+    position: relative;
+    z-index: 0; /* Гарантируем, что все дочерние элементы body находятся над .overlay */
+}
+.section {
+    padding: 20px;
+    margin-bottom: 20px;
+    margin: 0 103px; /* Добавляем отступы для всех секций */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative; /* Важно для абсолютного позиционирования */
+    height: 1024px;
+    width: 100%;
+    color: white;
+    overflow: hidden; /* Чтобы изображение не вылезало */
+}
+
+.hero-section img {
+    filter: brightness(50%);;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Изображение заполняет всю область */
+    z-index: 0; /* Чтобы не перекрывал текст */
+}
+
+.hero-section h1 {
+    left: 103px;     /* Расстояние от левой границы */
+    top: 130px;
+    position: relative;
+    z-index: 1;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 128px;
+}
+
+/* Description Section */
+.description {
+    max-width: 1000px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+}
+
+/* Content Blocks (01 and 02) */
+.content-block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.content-block.right-aligned .text-content {
+    text-align: right;
+}
+
+.content-block .text-content {
+    width: 500px;
+}
+
+.content-block .image-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.content-block .number {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 96px;
+    margin-bottom: -30px;
+    color: #000000;
+}
+
+.content-block .text-content p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: #706F74;
+}
+
+/* Middle Text Section */
+.middle-text h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: 0%;
+    text-align: right;
+    margin-right: 0;
+    margin-left: auto;
+    width: auto;
+    max-width: 1170px;
+}
+
+/* Bottom Text Section */
+.bottom-text p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Bottom Image Section */
+.bottom-image img {
+    width: 1026px;
+    height: 320px;
+    overflow: hidden;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    max-width: 100%;
+    margin: 0 auto; /* Center the image */
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.footer p {
+    margin-left: 102px;
+    margin-right: 102px;
+}
+
+.footer p:last-child {
+    font-weight: 700;
+}
